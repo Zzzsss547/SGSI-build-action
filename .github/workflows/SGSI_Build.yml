@@ -21,11 +21,11 @@ jobs:
       - name: Check Configuration
         run: |
           function required () { if ! [[ "$1" ]]; then echo "$2 variable can't be null." && exit 1; fi }
-          required "${{ steps.config.outputs.rom_url }}" "https://bigota.d.miui.com/V14.0.22.0.TMNCNXM/miui_MONDRIAN_V14.0.22.0.TMNCNXM_812a3df868_13.0.zip"
-          required "${{ steps.config.outputs.build_type }}" "AB"
+          required "${{ steps.config.outputs.rom_url }}" "https://bigota.d.miui.com/V14.0.23.4.10.DEV/miui_DITING_V14.0.23.4.10.DEV_5500cb8cb2_13.0.zip"
+          required "${{ steps.config.outputs.build_type }}" "ab"
           required "${{ steps.config.outputs.os_type }}" "MIUI"
-          required "${{ steps.config.outputs.zip_name }}" "miui_MONDRIAN_V14.0.22.0.TMNCNXM_812a3df868_13.0.zip"
-          required "${{ steps.config.outputs.version }}" "13"
+          required "${{ steps.config.outputs.zip_name }}" "miui_DITING_V14.0.23.4.10.DEV_5500cb8cb2_13.0.zip"
+          required "${{ steps.config.outputs.version }}" "VERSION config"
           required "${{ steps.config.outputs.repack_name }}" "1"
 
       - name: Cleanup workspace
